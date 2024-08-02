@@ -3,20 +3,146 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Happy Birthday Fizza!</title>
-
-  <link rel="stylesheet" href="styles/flexbox-center-container.css" media="all">
-  <link rel="stylesheet" href="styles/system-fonts.css" media="all">
-  <link rel="stylesheet" href="styles/style.css" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cutie!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .container {
+      color: rgba(55, 59, 65, 0.8);
+      font-weight: lighter;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-weight: normal;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background: #ffe0e9;
+      border-radius: 10px;
+      display: inline-block;
+      font-size: 1.5em;
+      list-style-type: none;
+      margin: 0 5px;
+      padding: 1em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    li span {
+      display: block;
+      font-size: 2.5rem;
+      color: #ff0066;
+    }
+
+    .merrywrap {
+      position: absolute;
+      right: 40px;
+      left: 40px;
+      bottom: 80px;
+      top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .giftbox > div {
+      background: #F64747;
+      position: absolute;
+      box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    body::before,
+    body::after {
+      content: '❤️';
+      position: absolute;
+      font-size: 5em;
+      color: rgba(255, 0, 102, 0.2);
+      animation: float 5s infinite;
+    }
+
+    body::after {
+      right: 10%;
+      top: 10%;
+    }
+
+    body::before {
+      left: 10%;
+      bottom: 10%;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      li {
+        font-size: 1em;
+        margin: 5px;
+        padding: 0.5em;
+      }
+      
+      li span {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      ul {
+        flex-direction: column;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <canvas id="c"></canvas>
   <canvas id="confetti"></canvas>
   <div class="container" id="count">
-    <h1 id="head">Hello Fizza</h1>
+    <h1 id="head">Hello Cutie:</h1>
     <ul>
       <li><span id="day"></span>days</li>
       <li><span id="hour"></span>hours</li>
